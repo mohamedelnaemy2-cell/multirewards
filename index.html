@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Game - Win Rewards</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            
+            /* 👇 هنا هتحط صورة الخلفية بتاعتك 👇 */
+            background-image: url('https://i.postimg.cc/8CP1NZ7P/Gemini-Generated-Image-81p1cc81p1cc81p1.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 50px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* 👇 تم تقليل التعتيم هنا لـ 0.4 عشان الخلفية توضح أكتر 👇 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(16, 21, 28, 0.4); 
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 3.2em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #ffffff; /* خليت اللون أبيض عشان يقرأ بوضوح مع الخلفية الفاتحة */
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px 20px;
+            
+            /* 👇 تم تكبير عرض الكارت عشان يناسب الأيقونات الكبيرة 👇 */
+            width: 250px; 
+            
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .card.pubg:hover { border-color: #f39c12; box-shadow: 0 0 25px rgba(243, 156, 18, 0.5); }
+        .card.freefire:hover { border-color: #e74c3c; box-shadow: 0 0 25px rgba(231, 76, 60, 0.5); }
+        .card.roblox:hover { border-color: #3498db; box-shadow: 0 0 25px rgba(52, 152, 219, 0.5); }
+
+        /* 👇 تم تكبير حجم الأيقونات لـ 160 بيكسل 👇 */
+        .card img {
+            width: 160px;
+            height: 160px;
+            object-fit: contain;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .reward {
+            font-size: 1em;
+            font-weight: bold;
+            padding: 7px 15px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .pubg .reward { color: #f39c12; }
+        .freefire .reward { color: #e74c3c; }
+        .roblox .reward { color: #3498db; }
+
+    </style>
+</head>
+<body>
+
+    <h1>CHOOSE YOUR GAME</h1>
+    <p class="subtitle">Select your game and win free UC, Diamonds, or Robux!</p>
+
+    <div class="container">
+        <!-- PUBG -->
+        <a href="https://rewardshub-pro.blogspot.com/p/fiki.html?m=1" class="card pubg" target="_blank">
+            <!-- 👇 هنا هتحط صورة أيقونة ببجي 👇 -->
+            <img src="https://www.freeiconspng.com/thumbs/pubg/pubg-circle-battlegrounds-photo-23.png" alt="PUBG Logo">
+            <h2>PUBG</h2>
+            <span class="reward">Win Free UC</span>
+        </a>
+
+        <!-- Free Fire -->
+        <a href="https://rewardshub-pro.blogspot.com/p/fiki.html?m=1" class="card freefire" target="_blank">
+            <!-- 👇 هنا هتحط صورة أيقونة فري فاير 👇 -->
+            <img src="https://img.icons8.com/?size=100&id=nueQSkEEpXhp&format=png&color=000000" alt="Free Fire Logo">
+            <h2>Free Fire</h2>
+            <span class="reward">Win Free Diamonds</span>
+        </a>
+
+        <!-- Roblox -->
+        <a href="https://rewardshub-pro.blogspot.com/p/fiki.html?m=1" class="card roblox" target="_blank">
+            <!-- 👇 هنا هتحط صورة أيقونة روبلوكس 👇 -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Roblox_Logo_2025.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Roblox Logo">
+            <h2>Roblox</h2>
+            <span class="reward">Win Free Robux</span>
+        </a>
+    </div>
+
+</body>
+</html>
